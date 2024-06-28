@@ -1,0 +1,114 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8666d21bb94d4cc1b4fce1368dc0328, type: 3}
+  m_Name: Configuration
+  m_EditorClassIdentifier: 
+  Categories:
+  - CategoryName: Share Market
+    questions:
+    - Question: 'Share holders are the '
+      Answer1: Employees of the company
+      Answer2: Owners of the Company
+      Answer3: Sweepers of the company
+      Answer4: None of the above
+      CorrectAnswerIndex: 2
+    - Question: 'Stock Market is a place where: '
+      Answer1: Stock buyers and sellers meet
+      Answer2: Investors and companies meet
+      Answer3: Real estate buyers and sellers meet
+      Answer4: Traders & investor meets
+      CorrectAnswerIndex: 1
+    - Question: 'The Indian Stock Market is regulated by: '
+      Answer1: State Bank of India
+      Answer2: Reserve Bank of India
+      Answer3: Government of India
+      Answer4: Securities and Exchange Board of India
+      CorrectAnswerIndex: 4
+    - Question: 'Stock Trading is involves:'
+      Answer1: Capital Risk
+      Answer2: Gauranteed Return
+      Answer3: Limited Risk
+      Answer4: No Risk
+      CorrectAnswerIndex: 1
+    - Question: 'The Largest Stock Market in India is: '
+      Answer1: BSE
+      Answer2: NSE
+      Answer3: DSE
+      Answer4: SEBI
+      CorrectAnswerIndex: 1
+    - Question: 'The Oldest Stock Market in India is: '
+      Answer1: BSE
+      Answer2: NSE
+      Answer3: DSE
+      Answer4: SEBI
+      CorrectAnswerIndex: 1
+    - Question: 'Share of profit, if distributed by management in cash is called
+        as:'
+      Answer1: Split of Shares
+      Answer2: Bonus
+      Answer3: Rights
+      Answer4: Dividends
+      CorrectAnswerIndex: 4
+    - Question: 'The Share Price is decided by :'
+      Answer1: Government
+      Answer2: Companies
+      Answer3: Buyers and sellers of the particular stocks
+      Answer4: Dividends
+      CorrectAnswerIndex: 3
+    - Question: 'Dividends received from limited companies are:'
+      Answer1: Taxable
+      Answer2: Non Taxable
+      Answer3: Refundable
+      Answer4: None of the Above
+      CorrectAnswerIndex: 1
+    - Question: Who is the member of a Stock Exchange?
+      Answer1: Banker
+      Answer2: Stock Broker
+      Answer3: Traders
+      Answer4: Government
+      CorrectAnswerIndex: 2
+    - Question: 'The Shares bought are held in: '
+      Answer1: Depositories
+      Answer2: Banker
+      Answer3: Broker
+      Answer4: Stock Exchanges
+      CorrectAnswerIndex: 1
+    - Question: 'NIFTY carries: '
+      Answer1: Top 50 Companies from India
+      Answer2: Top 50 Companies of BSE
+      Answer3: Top 50 Companies Listed on NSE
+      Answer4: Top 30 Companies of BSE
+      CorrectAnswerIndex: 3
+    - Question: 'Indian Stock Markets Movements are influenced by:'
+      Answer1: Global Factors
+      Answer2: Domestic Factors
+      Answer3: FII & DII
+      Answer4: All of The Above
+      CorrectAnswerIndex: 4
+    - Question: 'The process of issuing share to the public is called as: '
+      Answer1: Right Issue
+      Answer2: Bonus Issue
+      Answer3: Initial Public Offer
+      Answer4: Split Issue
+      CorrectAnswerIndex: 3
+    - Question: 'Stock Exchanges are: '
+      Answer1: Primary Markets
+      Answer2: Secondary Markets
+      Answer3: Both
+      Answer4: 
+      CorrectAnswerIndex: 3
+    - Question: 'The Best practice while investing is: '
+      Answer1: Buying the stocks which are cheaper or low priced
+      Answer2: Buying stocks from various sector to diversify the risk
+      Answer3: Investing all capital at once
+      Answer4: None of the above
+      CorrectAnswerIndex: 2

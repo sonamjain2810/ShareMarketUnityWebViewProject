@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+body {
+margin-top:10px;
+   	margin-left:5px;
+	margin-right:5px;
+    font-family: 'trebuchet MS', 'Lucida sans', Arial;
+    font-size: 14px;
+    color: #444;
+	background-color:#006635;
+  color:#FFFFFF;
+  	font-size:18px;
+
+}
+
+table {
+    *border-collapse: collapse; /* IE7 and lower */
+    border-spacing: 0;
+    width: 100%;
+}
+
+.bordered {
+    border: solid #ccc 1px;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+    -webkit-box-shadow: 0 1px 1px #ccc; 
+    -moz-box-shadow: 0 1px 1px #ccc; 
+    box-shadow: 0 1px 1px #ccc;         
+}
+
+.bordered td a
+{
+    background-color: #dce9f9;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#ebf3fc), to(#dce9f9));
+    background-image: -webkit-linear-gradient(top, #ebf3fc, #dce9f9);
+    background-image:    -moz-linear-gradient(top, #ebf3fc, #dce9f9);
+    background-image:     -ms-linear-gradient(top, #ebf3fc, #dce9f9);
+    background-image:      -o-linear-gradient(top, #ebf3fc, #dce9f9);
+    background-image:         linear-gradient(top, #ebf3fc, #dce9f9);
+    -webkit-box-shadow: 0 1px 0 rgba(255,255,255,.8) inset; 
+    -moz-box-shadow:0 1px 0 rgba(255,255,255,.8) inset;  
+    box-shadow: 0 1px 0 rgba(255,255,255,.8) inset;        
+    border-top: none;
+    text-shadow: 0 1px 0 rgba(255,255,255,.5);
+	
+  background-color:#006633;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAyCAYAAACd+7GKAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyBpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBXaW5kb3dzIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjUwRTNGNUIzNDhBMjExRTI5MjY0Q0ZBRDcxOTYxNUNFIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjUwRTNGNUI0NDhBMjExRTI5MjY0Q0ZBRDcxOTYxNUNFIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6NTBFM0Y1QjE0OEEyMTFFMjkyNjRDRkFENzE5NjE1Q0UiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6NTBFM0Y1QjI0OEEyMTFFMjkyNjRDRkFENzE5NjE1Q0UiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz6JCXrGAAAANElEQVR42mIwMrL6z8TAwPAXlfiDyvqNykIjfqGyiCB+4uL+JMUUNMvRCDSHo3nrL0CAAQBzOzIE69Ar8wAAAABJRU5ErkJggg==);
+  background-repeat: repeat-x;
+  box-shadow: inset 0 0 3px black;
+  -moz-box-shadow: inset 0 0 3px black;
+  -webkit-box-shadow: inset 0 0 3px black;
+  color:#FFFFFF;
+   }
+
+
+
+.bordered tr:hover {
+    background:#A3A352;
+    -o-transition: all 0.1s ease-in-out;
+    -webkit-transition: all 0.1s ease-in-out;
+    -moz-transition: all 0.1s ease-in-out;
+    -ms-transition: all 0.1s ease-in-out;
+    transition: all 0.1s ease-in-out;     
+}    
+    
+.bordered td, .bordered th {
+    border-left: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;    
+}
+
+.bordered td {
+  background-color:#006633;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAyCAYAAACd+7GKAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyBpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBXaW5kb3dzIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjUwRTNGNUIzNDhBMjExRTI5MjY0Q0ZBRDcxOTYxNUNFIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjUwRTNGNUI0NDhBMjExRTI5MjY0Q0ZBRDcxOTYxNUNFIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6NTBFM0Y1QjE0OEEyMTFFMjkyNjRDRkFENzE5NjE1Q0UiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6NTBFM0Y1QjI0OEEyMTFFMjkyNjRDRkFENzE5NjE1Q0UiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz6JCXrGAAAANElEQVR42mIwMrL6z8TAwPAXlfiDyvqNykIjfqGyiCB+4uL+JMUUNMvRCDSHo3nrL0CAAQBzOzIE69Ar8wAAAABJRU5ErkJggg==);
+  background-repeat: repeat-x;
+  box-shadow: inset 0 0 3px black;
+  -moz-box-shadow: inset 0 0 3px black;
+  -webkit-box-shadow: inset 0 0 3px black;
+  color:#FFFFFF;
+}
+.bordered th {
+    background-color: #dce9f9;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#ebf3fc), to(#dce9f9));
+    background-image: -webkit-linear-gradient(top, #ebf3fc, #dce9f9);
+    background-image:    -moz-linear-gradient(top, #ebf3fc, #dce9f9);
+    background-image:     -ms-linear-gradient(top, #ebf3fc, #dce9f9);
+    background-image:      -o-linear-gradient(top, #ebf3fc, #dce9f9);
+    background-image:         linear-gradient(top, #ebf3fc, #dce9f9);
+    -webkit-box-shadow: 0 1px 0 rgba(255,255,255,.8) inset; 
+    -moz-box-shadow:0 1px 0 rgba(255,255,255,.8) inset;  
+    box-shadow: 0 1px 0 rgba(255,255,255,.8) inset;        
+    border-top: none;
+    text-shadow: 0 1px 0 rgba(255,255,255,.5);
+	
+  background-color:#006633;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAyCAYAAACd+7GKAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyBpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBXaW5kb3dzIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjUwRTNGNUIzNDhBMjExRTI5MjY0Q0ZBRDcxOTYxNUNFIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjUwRTNGNUI0NDhBMjExRTI5MjY0Q0ZBRDcxOTYxNUNFIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6NTBFM0Y1QjE0OEEyMTFFMjkyNjRDRkFENzE5NjE1Q0UiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6NTBFM0Y1QjI0OEEyMTFFMjkyNjRDRkFENzE5NjE1Q0UiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz6JCXrGAAAANElEQVR42mIwMrL6z8TAwPAXlfiDyvqNykIjfqGyiCB+4uL+JMUUNMvRCDSHo3nrL0CAAQBzOzIE69Ar8wAAAABJRU5ErkJggg==);
+  background-repeat: repeat-x;
+  box-shadow: inset 0 0 3px black;
+  -moz-box-shadow: inset 0 0 3px black;
+  -webkit-box-shadow: inset 0 0 3px black;
+  color:#FFFFFF;
+	
+}
+
+
+.bordered td:first-child, .bordered th:first-child {
+    border-left: none;
+}
+
+.bordered th:first-child {
+    -moz-border-radius: 6px 0 0 0;
+    -webkit-border-radius: 6px 0 0 0;
+    border-radius: 6px 0 0 0;
+}
+
+.bordered th:last-child {
+    -moz-border-radius: 0 6px 0 0;
+    -webkit-border-radius: 0 6px 0 0;
+    border-radius: 0 6px 0 0;
+}
+
+.bordered th:only-child{
+    -moz-border-radius: 6px 6px 0 0;
+    -webkit-border-radius: 6px 6px 0 0;
+    border-radius: 6px 6px 0 0;
+}
+
+.bordered tr:last-child td:first-child {
+    -moz-border-radius: 0 0 0 6px;
+    -webkit-border-radius: 0 0 0 6px;
+    border-radius: 0 0 0 6px;
+}
+
+.bordered tr:last-child td:last-child {
+    -moz-border-radius: 0 0 6px 0;
+    -webkit-border-radius: 0 0 6px 0;
+    border-radius: 0 0 6px 0;
+}
+
+
+
+/*----------------------*/
+
+.zebra td, .zebra th {
+    padding: 10px;
+    border-bottom: 1px solid #f2f2f2;    
+}
+
+.zebra tbody tr:nth-child(even) {
+    background: #f5f5f5;
+    -webkit-box-shadow: 0 1px 0 rgba(255,255,255,.8) inset; 
+    -moz-box-shadow:0 1px 0 rgba(255,255,255,.8) inset;  
+    box-shadow: 0 1px 0 rgba(255,255,255,.8) inset;        
+}
+
+.zebra th {
+    text-align: left;
+    text-shadow: 0 1px 0 rgba(255,255,255,.5); 
+    border-bottom: 1px solid #ccc;
+    background-color: #eee;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#f5f5f5), to(#eee));
+    background-image: -webkit-linear-gradient(top, #f5f5f5, #eee);
+    background-image:    -moz-linear-gradient(top, #f5f5f5, #eee);
+    background-image:     -ms-linear-gradient(top, #f5f5f5, #eee);
+    background-image:      -o-linear-gradient(top, #f5f5f5, #eee); 
+    background-image:         linear-gradient(top, #f5f5f5, #eee);
+}
+
+.zebra th:first-child {
+    -moz-border-radius: 6px 0 0 0;
+    -webkit-border-radius: 6px 0 0 0;
+    border-radius: 6px 0 0 0;  
+}
+
+.zebra th:last-child {
+    -moz-border-radius: 0 6px 0 0;
+    -webkit-border-radius: 0 6px 0 0;
+    border-radius: 0 6px 0 0;
+}
+
+.zebra th:only-child{
+    -moz-border-radius: 6px 6px 0 0;
+    -webkit-border-radius: 6px 6px 0 0;
+    border-radius: 6px 6px 0 0;
+}
+
+
+
+
+.zebra tfoot td {
+    border-bottom: 0;
+    border-top: 1px solid #fff;
+    background-color: #f1f1f1;  
+}
+
+.zebra tfoot td:first-child {
+    -moz-border-radius: 0 0 0 6px;
+    -webkit-border-radius: 0 0 0 6px;
+    border-radius: 0 0 0 6px;
+}
+
+.zebra tfoot td:last-child {
+    -moz-border-radius: 0 0 6px 0;
+    -webkit-border-radius: 0 0 6px 0;
+    border-radius: 0 0 6px 0;
+}
+
+.zebra tfoot td:only-child{
+    -moz-border-radius: 0 0 6px 6px;
+    -webkit-border-radius: 0 0 6px 6px
+    border-radius: 0 0 6px 6px
+}
+.round-button {
+    display:block;
+    width:35px;
+    height:35px;
+    border: 0px solid #f5f5f5;
+    border-radius: 50%;
+    color:#000000;
+    text-align:center;
+    text-decoration:none;
+    background:#FFFFFF;
+    box-shadow: 0 0 3px gray;
+    font-size:22px;
+    font-weight:bold;
+}
+.round-button:hover {
+    background:#C0C0C0;
+}  
+</style>
+<link rel="stylesheet" href="jquery-ui.css" />
+    <script src="jquery-1.8.3.min.js"></script>
+    <script src="jquery-ui.js"></script>
+    <link rel="stylesheet" href="/resources/demos/style.css" />
+    <link rel="stylesheet" type="text/css" href="toggle.css">
+    <script type="text/javascript" src="toggle.js">
+	</script>
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"></head>
+<body>
+
+
+	
+<table border="0" style="color:#FFFFFF; background:#006600;" cellpadding="3" cellspacing="0" width="100%" height="60">
+<tr><td  align="center" width="50"><input class="round-button" type="button" value="◄" onclick="history.back(-1)" /></td>
+<td><span style="font-size:24px;"><strong>You Think You Understand Stocks</strong></span></td></tr></table>
+<table class="bordered">
+    <thead>
+
+    <tr>
+        <th>Sr. N.</th>        
+        <th>Substantial Questions</th>
+
+
+    </tr>
+    </thead>
+    <tr>
+
+        <td>1</td>        
+        <td>Companies like their stocks to go up in value because:
+		<br>A. They make more money when the stock is at a higher price.
+		<br>B. Part of their profits comes from the value of their stock.
+		<br>C. The higher the price of their shares, the more likely they are to make higher profits that year.
+		<br>D. All of the above
+		<br>E. None of the above.
+		
+
+
+		
+	   <hr>
+		<a href="#" id="button1" class="ui-state-default ui-corner-all">View Answer</a>
+		<div class="toggler">
+    <div id="effect1"  style="display:none;" class="ui-widget-content ui-corner-all">
+        <h3 class="ui-widget-header ui-corner-all">Answer & Explanation</h3>
+		<p> <div style="display:none">correct_option_number: </div> 
+Answer : None of the above.
+			
+        </p>
+    </div>
+</div>
+
+		</td>
+		
+		
+
+    </tr>        
+    <tr>
+        <td>2</td>         
+        <td> 
+		If you own a share of stock, you:
+		<br>A. Own part of the company that issued the stock
+		<br>B. Have the right to vote if another company wants to buy the company whose stock you own.
+		<br>C. Might receive a check every year that represents your share in the company’s profits.
+		<br>D. All of the above
+		<br>E. None of the above.
+		
+
+
+		<hr>
+		<a href="#" id="button2" class="ui-state-default ui-corner-all">View Answer</a>
+		<div class="toggler">
+    <div id="effect2"  style="display:none;" class="ui-widget-content ui-corner-all">
+        <h3 class="ui-widget-header ui-corner-all">Answer & Explanation</h3>
+        <p> <div style="display:none">correct_option_number: </div>
+Answer : None of the above.
+			
+        </p>
+    </div>
+</div>
+
+		</td>
+
+
+    </tr>
+	<tr>
+        <td>3</td>         
+        <td>	
+A stock is to a mutual fund as:
+		<br>A. A blind squirrel is to an acorn.
+		<br>B. One egg is to a dozen.
+		<br>C. A tree is to a forest.
+		<br>D. The pitcher is to a baseball team.
+
+
+		
+		<hr>
+		<a href="#" id="button3" class="ui-state-default ui-corner-all">View Answer</a>
+		<div class="toggler">
+    <div id="effect3"  style="display:none;" class="ui-widget-content ui-corner-all">
+        <h3 class="ui-widget-header ui-corner-all">Answer & Explanation</h3>
+        <p> <div style="display:none">correct_option_number: </div>
+Answer : The pitcher is to a baseball team.
+			
+			
+        </p>
+		    </div>
+</div>
+
+		</td>
+
+
+    </tr>
+	<tr>
+        <td>4</td>         
+        <td> 	
+
+	You are an enterprising high school student. You inherit $10,000 and want to use it to pay for your college
+education starting in a little over two years. You can’t afford to lose money, but you need more for college.
+Should you:
+		<br>A. Invest in the safest blue chip stocks since they will probably be worth a lot more in two years.
+		<br>B. Avoid the stock market since two years is too long of a time to invest.
+		<br>C. Avoid the stock market since two years is too short of a time to invest.
+		<br>D. Find a broker so good he promises to increase your investment by 50% in time for college.
+		
+
+
+	
+		<hr>
+		<a href="#" id="button4" class="ui-state-default ui-corner-all">View Answer</a>
+		<div class="toggler">
+    <div id="effect4"  style="display:none;" class="ui-widget-content ui-corner-all">
+        <h3 class="ui-widget-header ui-corner-all">Answer & Explanation</h3>
+        <p> <div style="display:none">correct_option_number: </div>
+Answer : Avoid the stock market since two years is too short of a time to invest
+			
+        </p>
+    </div>
+</div>
+
+		</td>
+
+
+    </tr>
+	<tr>
+        <td>5</td>         
+        <td>You discover your great-great--grandfather named you in his will. The good news is that he left you stock
+in Coca-Cola. The bad news is that it is only one share he bought in 1919 (ten years before the Great
+Depression) for $40. How much is that share worth now?
+		<br>A. Nearly 1.8 million dollars.
+		<br>B. Barely enough to buy a year’s worth of Diet Cherry Coke.
+		<br>C. Nearly 7 million dollars.
+		<br>D. It has increased a hundredfold and is now worth $4,000.
+
+
+
+		
+		<hr>
+		<a href="#" id="button5" class="ui-state-default ui-corner-all">View Answer</a>
+		<div class="toggler">
+    <div id="effect5"  style="display:none;" class="ui-widget-content ui-corner-all">
+        <h3 class="ui-widget-header ui-corner-all">Answer & Explanation</h3>
+        <p> <div style="display:none">correct_option_number: </div>
+Answer : Nearly 7 million dollars.
+			 
+        </p>
+    </div>
+</div>
+
+		</td>
+
+
+    </tr>
+	<tr>
+        <td>6</td>         
+        <td>	
+Which of these has the most effect on the price of a stock:
+		<br>A. The opinion of investors about the future chances for the company.
+		<br>B. The general state of the economy.
+		<br>C. The performance of the stock market in general.
+		<br>D. How much the company earns in profits
+
+
+
+	
+		<hr>
+		<a href="#" id="button6" class="ui-state-default ui-corner-all">View Answer</a>
+		<div class="toggler">
+    <div id="effect6"  style="display:none;" class="ui-widget-content ui-corner-all">
+        <h3 class="ui-widget-header ui-corner-all">Answer & Explanation</h3>
+        <p> <div style="display:none">correct_option_number: </div>
+Answer : The opinion of investors about the future chances for the company.
+			 
+        </p>
+    </div>
+</div>
+
+		</td>
+
+
+    </tr>
+	<tr>
+        <td>7</td>         
+        <td>  	
+
+
+You read that the Dow Jones Industrial average has gone down 500 points in the last two weeks. What
+does this mean to you as an investor:
+		<br>A. It’s time to sell since prices are headed the wrong direction.
+		<br>B. Nothing, since you did not invest in Dow Jones.
+		<br>C. Stocks that are part of the average are now cheaper to buy.
+		<br>D. Such a major fall in the index indicates serious problems for the economy.
+
+
+
+		
+		<hr>
+		<a href="#" id="button7" class="ui-state-default ui-corner-all">View Answer</a>
+		<div class="toggler">
+    <div id="effect7"  style="display:none;" class="ui-widget-content ui-corner-all">
+        <h3 class="ui-widget-header ui-corner-all">Answer & Explanation</h3>
+       <p> <div style="display:none">correct_option_number: </div>
+Answer : Stocks that are part of the average are now cheaper to buy.
+			
+        </p>
+    </div>
+</div>
+
+		</td>
+
+
+    </tr>
+	<tr>
+        <td>8</td>         
+        <td>  	
+The efficient market theory states that:
+		<br>A. You can make money in stocks, but are unlikely to “beat the market.”
+		<br>B. The market is so efficient that only professional stock traders and brokers can make money over the
+long term.
+		<br>C. Information about companies is available to everyone so that it is now nearly impossible to actually
+“make money” in the stock market.
+		<br>D. You can make money in stocks but most of that is taken away by broker fees, commissions, and
+sales charges.
+
+
+
+
+	
+		<hr>
+		<a href="#" id="button8" class="ui-state-default ui-corner-all">View Answer</a>
+		<div class="toggler">
+    <div id="effect8"  style="display:none;" class="ui-widget-content ui-corner-all">
+        <h3 class="ui-widget-header ui-corner-all">Answer & Explanation</h3>
+        <p> <div style="display:none">correct_option_number: </div>
+Answer : You can make money in stocks, but are unlikely to “beat the market.”
+			
+        </p>
+    </div>
+</div>
+
+		</td>
+
+
+    </tr>
+	<tr>
+        <td>9</td>         
+        <td>	
+If a company listed on the New York Stock Exchange makes a profit it:
+		<br>A. Must declare a dividend payable to its shareholders during that year.
+		<br>B. Can pay a dividend with the profits or plow the money back into the company to make more profits.
+		<br>C. Must pay dividends unless it receives shareholder approval to use the profit for other purposes.
+		<br>D. Increases the value of the stock by the amount of the dividend.
+		<br>E. Insures that the price of its stock does not drop in value.
+
+
+		
+		<hr>
+		<a href="#" id="button9" class="ui-state-default ui-corner-all">View Answer</a>
+		<div class="toggler">
+    <div id="effect9"  style="display:none;" class="ui-widget-content ui-corner-all">
+        <h3 class="ui-widget-header ui-corner-all">Answer & Explanation</h3>
+        <p> <div style="display:none">correct_option_number: </div>
+Answer : Can pay a dividend with the profits or plow the money back into the company to make more profits.
+			
+        </p>
+    </div>
+</div>
+
+		</td>
+
+
+    </tr>
+    <tr>
+
+        <td>10</td>        
+        <td> 
+When you buy a share of stock, the money you pay for it is:
+		<br>A. Divided among the stock market, the broker, and the company who issued the stock.
+		<br>B. Sent directly to the company in which you invested (after subtracting brokerage fees) for whatever
+business use it sees fit.
+		<br>C. Is sent to the company but how it is used is carefully regulated by the Securities and Exchange
+Commission.
+		<br>D. Goes (after subtracting brokerage fees) to some other person who wants to sell the stock.
+
+	   <hr>
+		<a href="#" id="button10" class="ui-state-default ui-corner-all">View Answer</a>
+		<div class="toggler">
+    <div id="effect10"  style="display:none;" class="ui-widget-content ui-corner-all">
+        <h3 class="ui-widget-header ui-corner-all">Answer & Explanation</h3>
+		<p> <div style="display:none">correct_option_number: </div> 
+Answer : Is sent to the company but how it is used is carefully regulated by the Securities and Exchange
+Commission.
+
+			
+        </p>
+    </div>
+</div>
+
+		</td>
+		
+		
+
+    </tr>        
+   
+</table>
+
+	
+	
+</body>
+</html>

@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+body {
+margin-top:10px;
+   	margin-left:5px;
+	margin-right:5px;
+    font-family: 'trebuchet MS', 'Lucida sans', Arial;
+    font-size: 14px;
+    color: #444;
+	background-color:#006635;
+  color:#FFFFFF;
+  	font-size:18px;
+
+}
+
+table {
+    *border-collapse: collapse; /* IE7 and lower */
+    border-spacing: 0;
+    width: 100%;
+}
+
+.bordered {
+    border: solid #ccc 1px;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+    -webkit-box-shadow: 0 1px 1px #ccc; 
+    -moz-box-shadow: 0 1px 1px #ccc; 
+    box-shadow: 0 1px 1px #ccc;         
+}
+
+.bordered td a
+{
+    background-color: #dce9f9;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#ebf3fc), to(#dce9f9));
+    background-image: -webkit-linear-gradient(top, #ebf3fc, #dce9f9);
+    background-image:    -moz-linear-gradient(top, #ebf3fc, #dce9f9);
+    background-image:     -ms-linear-gradient(top, #ebf3fc, #dce9f9);
+    background-image:      -o-linear-gradient(top, #ebf3fc, #dce9f9);
+    background-image:         linear-gradient(top, #ebf3fc, #dce9f9);
+    -webkit-box-shadow: 0 1px 0 rgba(255,255,255,.8) inset; 
+    -moz-box-shadow:0 1px 0 rgba(255,255,255,.8) inset;  
+    box-shadow: 0 1px 0 rgba(255,255,255,.8) inset;        
+    border-top: none;
+    text-shadow: 0 1px 0 rgba(255,255,255,.5);
+	
+  background-color:#006633;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAyCAYAAACd+7GKAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyBpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBXaW5kb3dzIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjUwRTNGNUIzNDhBMjExRTI5MjY0Q0ZBRDcxOTYxNUNFIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjUwRTNGNUI0NDhBMjExRTI5MjY0Q0ZBRDcxOTYxNUNFIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6NTBFM0Y1QjE0OEEyMTFFMjkyNjRDRkFENzE5NjE1Q0UiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6NTBFM0Y1QjI0OEEyMTFFMjkyNjRDRkFENzE5NjE1Q0UiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz6JCXrGAAAANElEQVR42mIwMrL6z8TAwPAXlfiDyvqNykIjfqGyiCB+4uL+JMUUNMvRCDSHo3nrL0CAAQBzOzIE69Ar8wAAAABJRU5ErkJggg==);
+  background-repeat: repeat-x;
+  box-shadow: inset 0 0 3px black;
+  -moz-box-shadow: inset 0 0 3px black;
+  -webkit-box-shadow: inset 0 0 3px black;
+  color:#FFFFFF;
+   }
+
+
+
+.bordered tr:hover {
+    background:#A3A352;
+    -o-transition: all 0.1s ease-in-out;
+    -webkit-transition: all 0.1s ease-in-out;
+    -moz-transition: all 0.1s ease-in-out;
+    -ms-transition: all 0.1s ease-in-out;
+    transition: all 0.1s ease-in-out;     
+}    
+    
+.bordered td, .bordered th {
+    border-left: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;    
+}
+
+.bordered td {
+  background-color:#006633;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAyCAYAAACd+7GKAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyBpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBXaW5kb3dzIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjUwRTNGNUIzNDhBMjExRTI5MjY0Q0ZBRDcxOTYxNUNFIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjUwRTNGNUI0NDhBMjExRTI5MjY0Q0ZBRDcxOTYxNUNFIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6NTBFM0Y1QjE0OEEyMTFFMjkyNjRDRkFENzE5NjE1Q0UiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6NTBFM0Y1QjI0OEEyMTFFMjkyNjRDRkFENzE5NjE1Q0UiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz6JCXrGAAAANElEQVR42mIwMrL6z8TAwPAXlfiDyvqNykIjfqGyiCB+4uL+JMUUNMvRCDSHo3nrL0CAAQBzOzIE69Ar8wAAAABJRU5ErkJggg==);
+  background-repeat: repeat-x;
+  box-shadow: inset 0 0 3px black;
+  -moz-box-shadow: inset 0 0 3px black;
+  -webkit-box-shadow: inset 0 0 3px black;
+  color:#FFFFFF;
+}
+.bordered th {
+    background-color: #dce9f9;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#ebf3fc), to(#dce9f9));
+    background-image: -webkit-linear-gradient(top, #ebf3fc, #dce9f9);
+    background-image:    -moz-linear-gradient(top, #ebf3fc, #dce9f9);
+    background-image:     -ms-linear-gradient(top, #ebf3fc, #dce9f9);
+    background-image:      -o-linear-gradient(top, #ebf3fc, #dce9f9);
+    background-image:         linear-gradient(top, #ebf3fc, #dce9f9);
+    -webkit-box-shadow: 0 1px 0 rgba(255,255,255,.8) inset; 
+    -moz-box-shadow:0 1px 0 rgba(255,255,255,.8) inset;  
+    box-shadow: 0 1px 0 rgba(255,255,255,.8) inset;        
+    border-top: none;
+    text-shadow: 0 1px 0 rgba(255,255,255,.5);
+	
+  background-color:#006633;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAyCAYAAACd+7GKAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyBpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBXaW5kb3dzIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjUwRTNGNUIzNDhBMjExRTI5MjY0Q0ZBRDcxOTYxNUNFIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjUwRTNGNUI0NDhBMjExRTI5MjY0Q0ZBRDcxOTYxNUNFIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6NTBFM0Y1QjE0OEEyMTFFMjkyNjRDRkFENzE5NjE1Q0UiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6NTBFM0Y1QjI0OEEyMTFFMjkyNjRDRkFENzE5NjE1Q0UiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz6JCXrGAAAANElEQVR42mIwMrL6z8TAwPAXlfiDyvqNykIjfqGyiCB+4uL+JMUUNMvRCDSHo3nrL0CAAQBzOzIE69Ar8wAAAABJRU5ErkJggg==);
+  background-repeat: repeat-x;
+  box-shadow: inset 0 0 3px black;
+  -moz-box-shadow: inset 0 0 3px black;
+  -webkit-box-shadow: inset 0 0 3px black;
+  color:#FFFFFF;
+	
+}
+
+
+.bordered td:first-child, .bordered th:first-child {
+    border-left: none;
+}
+
+.bordered th:first-child {
+    -moz-border-radius: 6px 0 0 0;
+    -webkit-border-radius: 6px 0 0 0;
+    border-radius: 6px 0 0 0;
+}
+
+.bordered th:last-child {
+    -moz-border-radius: 0 6px 0 0;
+    -webkit-border-radius: 0 6px 0 0;
+    border-radius: 0 6px 0 0;
+}
+
+.bordered th:only-child{
+    -moz-border-radius: 6px 6px 0 0;
+    -webkit-border-radius: 6px 6px 0 0;
+    border-radius: 6px 6px 0 0;
+}
+
+.bordered tr:last-child td:first-child {
+    -moz-border-radius: 0 0 0 6px;
+    -webkit-border-radius: 0 0 0 6px;
+    border-radius: 0 0 0 6px;
+}
+
+.bordered tr:last-child td:last-child {
+    -moz-border-radius: 0 0 6px 0;
+    -webkit-border-radius: 0 0 6px 0;
+    border-radius: 0 0 6px 0;
+}
+
+
+
+/*----------------------*/
+
+.zebra td, .zebra th {
+    padding: 10px;
+    border-bottom: 1px solid #f2f2f2;    
+}
+
+.zebra tbody tr:nth-child(even) {
+    background: #f5f5f5;
+    -webkit-box-shadow: 0 1px 0 rgba(255,255,255,.8) inset; 
+    -moz-box-shadow:0 1px 0 rgba(255,255,255,.8) inset;  
+    box-shadow: 0 1px 0 rgba(255,255,255,.8) inset;        
+}
+
+.zebra th {
+    text-align: left;
+    text-shadow: 0 1px 0 rgba(255,255,255,.5); 
+    border-bottom: 1px solid #ccc;
+    background-color: #eee;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#f5f5f5), to(#eee));
+    background-image: -webkit-linear-gradient(top, #f5f5f5, #eee);
+    background-image:    -moz-linear-gradient(top, #f5f5f5, #eee);
+    background-image:     -ms-linear-gradient(top, #f5f5f5, #eee);
+    background-image:      -o-linear-gradient(top, #f5f5f5, #eee); 
+    background-image:         linear-gradient(top, #f5f5f5, #eee);
+}
+
+.zebra th:first-child {
+    -moz-border-radius: 6px 0 0 0;
+    -webkit-border-radius: 6px 0 0 0;
+    border-radius: 6px 0 0 0;  
+}
+
+.zebra th:last-child {
+    -moz-border-radius: 0 6px 0 0;
+    -webkit-border-radius: 0 6px 0 0;
+    border-radius: 0 6px 0 0;
+}
+
+.zebra th:only-child{
+    -moz-border-radius: 6px 6px 0 0;
+    -webkit-border-radius: 6px 6px 0 0;
+    border-radius: 6px 6px 0 0;
+}
+
+
+
+
+.zebra tfoot td {
+    border-bottom: 0;
+    border-top: 1px solid #fff;
+    background-color: #f1f1f1;  
+}
+
+.zebra tfoot td:first-child {
+    -moz-border-radius: 0 0 0 6px;
+    -webkit-border-radius: 0 0 0 6px;
+    border-radius: 0 0 0 6px;
+}
+
+.zebra tfoot td:last-child {
+    -moz-border-radius: 0 0 6px 0;
+    -webkit-border-radius: 0 0 6px 0;
+    border-radius: 0 0 6px 0;
+}
+
+.zebra tfoot td:only-child{
+    -moz-border-radius: 0 0 6px 6px;
+    -webkit-border-radius: 0 0 6px 6px
+    border-radius: 0 0 6px 6px
+}
+ .round-button {
+    display:block;
+    width:35px;
+    height:35px;
+    border: 0px solid #f5f5f5;
+    border-radius: 50%;
+    color:#000000;
+    text-align:center;
+    text-decoration:none;
+    background:#FFFFFF;
+    box-shadow: 0 0 3px gray;
+    font-size:22px;
+    font-weight:bold;
+}
+.round-button:hover {
+    background:#C0C0C0;
+} 
+</style>
+<link rel="stylesheet" href="jquery-ui.css" />
+    <script src="jquery-1.8.3.min.js"></script>
+    <script src="jquery-ui.js"></script>
+    <link rel="stylesheet" href="/resources/demos/style.css" />
+    <link rel="stylesheet" type="text/css" href="toggle.css">
+    <script type="text/javascript" src="toggle.js">
+	</script>
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"></head>
+<body>
+
+
+<table border="0" style="color:#FFFFFF; background:#006600;" cellpadding="3" cellspacing="0" width="100%" height="60">
+<tr><td  align="center" width="50"><input class="round-button" type="button" value="◄" onClick="history.back(-1)" /></td>
+<td><span style="font-size:24px;"><strong>Stocks Market</strong></span></td></tr></table><br />
+<table class="bordered">
+    <thead>
+
+    <tr>
+        <th>Sr. N.</th>        
+        <th>Substantial Questions</th>
+
+
+    </tr>
+    </thead>
+    <tr>
+
+        <td>1</td>        
+        <td>
+<span style="font-size:18px;"> A best efforts offering is sometimes used in connection with a&nbsp; of new, long-term securities.</span><br />
+<ol type="A">
+	<li>
+		<span style="font-size:18px;">private placement</span></li>
+	<li>
+		<span style="font-size:18px;">privileged subscription</span></li>
+	<li>
+		<span style="font-size:18px;">public issue</span></li>
+	<li>
+		<span style="font-size:18px;">all of the above</span></li>
+</ol>
+
+			
+		
+	   <hr>
+		<a href="#" id="button1" class="ui-state-default ui-corner-all">View Answer</a>
+		<div class="toggler">
+    <div id="effect1"  style="display:none;" class="ui-widget-content ui-corner-all">
+        <h3 class="ui-widget-header ui-corner-all">Answer & Explanation</h3>
+		<p> <div style="display:none">correct_option_number: </div> 
+Answer: public issue
+			
+        </p>
+    </div>
+</div>
+
+		</td>
+		
+		
+
+    </tr>        
+    <tr>
+        <td>2</td>         
+        <td> 
+<span style="font-size:18px;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; permits what is known as a shelf registration.</span><br />
+<ol type="A">
+	<li>
+		<span style="font-size:18px;">SEC Rule 144</span></li>
+	<li>
+		<span style="font-size:18px;">SEC Rule 144a</span></li>
+	<li>
+		<span style="font-size:18px;">SEC Rule 415</span></li>
+	<li>
+		<span style="font-size:18px;">SEC Form 13D</span></li>
+</ol>
+
+			
+		
+		<hr>
+		<a href="#" id="button2" class="ui-state-default ui-corner-all">View Answer</a>
+		<div class="toggler">
+    <div id="effect2"  style="display:none;" class="ui-widget-content ui-corner-all">
+        <h3 class="ui-widget-header ui-corner-all">Answer & Explanation</h3>
+        <p> <div style="display:none">correct_option_number: </div>
+Answer: public issue
+			
+        </p>
+    </div>
+</div>
+
+		</td>
+
+
+    </tr>
+	<tr>
+        <td>3</td>         
+        <td>	
+
+			
+<span style="font-size:18px;">  A company can ensure the complete success of a rights offering by making use of a</span><br />
+<ol type="A">
+	<li>
+		<span style="font-size:18px;">standby arrangement.</span></li>
+	<li>
+		<span style="font-size:18px;">oversubscription privilege.</span></li>
+	<li>
+		<span style="font-size:18px;">green shoe provision.</span></li>
+	<li>
+		<span style="font-size:18px;">shelf registration.</span></li>
+</ol>
+
+		<hr>
+		<a href="#" id="button3" class="ui-state-default ui-corner-all">View Answer</a>
+		<div class="toggler">
+    <div id="effect3"  style="display:none;" class="ui-widget-content ui-corner-all">
+        <h3 class="ui-widget-header ui-corner-all">Answer & Explanation</h3>
+        <p> <div style="display:none">correct_option_number: </div>
+Answer: standby arrangement.
+			
+			
+        </p>
+		    </div>
+</div>
+
+		</td>
+
+
+    </tr>
+	<tr>
+        <td>4</td>         
+        <td> 	
+
+<span style="font-size:18px;">  The market price of K-T-Lew Corporation&#39;s common stock is $60 per share, and each share gives its owner one subscription right. Four rights are required to purchase an additional share of common stock at the subscription price of $54 per share. If the common stock is currently selling &quot;rights-on,&quot; the theoretical value of a right is closest to</span><br />
+<ol type="A">
+	<li>
+		<span style="font-size:18px;">$0.96</span></li>
+	<li>
+		<span style="font-size:18px;">$1.20</span></li>
+	<li>
+		<span style="font-size:18px;">$1.50</span></li>
+	<li>
+		<span style="font-size:18px;">$6.00</span></li>
+</ol>
+
+			
+	
+		<hr>
+		<a href="#" id="button4" class="ui-state-default ui-corner-all">View Answer</a>
+		<div class="toggler">
+    <div id="effect4"  style="display:none;" class="ui-widget-content ui-corner-all">
+        <h3 class="ui-widget-header ui-corner-all">Answer & Explanation</h3>
+        <p> <div style="display:none">correct_option_number: </div>
+Answer: $1.20
+			
+        </p>
+    </div>
+</div>
+
+		</td>
+
+
+    </tr>
+	<tr>
+        <td>5</td>         
+        <td>
+<span style="font-size:18px;"> (See Question 12 above.) The theoretical value of one share of K-T-Lew common stock when it goes &quot;ex-rights&quot; is closest to</span><br />
+<ol type="A">
+	<li>
+		<span style="font-size:18px;">$54.00</span></li>
+	<li>
+		<span style="font-size:18px;">$58.50</span></li>
+	<li>
+		<span style="font-size:18px;">$58.80</span></li>
+	<li>
+		<span style="font-size:18px;">$59.04</span></li>
+</ol>
+
+			
+			
+		
+		<hr>
+		<a href="#" id="button5" class="ui-state-default ui-corner-all">View Answer</a>
+		<div class="toggler">
+    <div id="effect5"  style="display:none;" class="ui-widget-content ui-corner-all">
+        <h3 class="ui-widget-header ui-corner-all">Answer & Explanation</h3>
+        <p> <div style="display:none">correct_option_number: </div>
+Answer: $58.80
+			 
+        </p>
+    </div>
+</div>
+
+		</td>
+
+
+    </tr>
+	<tr>
+        <td>6</td>         
+        <td>	
+<span style="font-size:18px;"> Financial intermediaries&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .</span><br />
+<ol type="A">
+	<li>
+		<span style="font-size:18px;">do not invest in new long-term securities</span></li>
+	<li>
+		<span style="font-size:18px;">include insurance companies and pension funds</span></li>
+	<li>
+		<span style="font-size:18px;">include the national and regional stock exchanges</span></li>
+	<li>
+		<span style="font-size:18px;">are usually underwriting syndicates</span></li>
+</ol>
+
+	
+		<hr>
+		<a href="#" id="button6" class="ui-state-default ui-corner-all">View Answer</a>
+		<div class="toggler">
+    <div id="effect6"  style="display:none;" class="ui-widget-content ui-corner-all">
+        <h3 class="ui-widget-header ui-corner-all">Answer & Explanation</h3>
+        <p> <div style="display:none">correct_option_number: </div>
+Answer: include insurance companies and pension funds
+			 
+        </p>
+    </div>
+</div>
+
+		</td>
+
+
+    </tr>
+	<tr>
+        <td>7</td>         
+        <td>  	
+
+			
+<span style="font-size:18px;"> The Sarbanes-Oxley Act of 2002 (SOX) was largely a response to:</span><br />
+<ol type="A">
+	<li>
+		<span style="font-size:18px;">a series of corporate and accounting frauds involving Enron, Arthur Andersen, WorldCom, and numerous others.</span></li>
+	<li>
+		<span style="font-size:18px;">a dramatic rise in the US trade deficit.</span></li>
+	<li>
+		<span style="font-size:18px;">charges of excessive compensation to top corporate executives.</span></li>
+	<li>
+		<span style="font-size:18px;">rising complaints by investors and security analysts over the financial accounting for stock options.</span></li>
+
+			
+		<hr>
+		<a href="#" id="button7" class="ui-state-default ui-corner-all">View Answer</a>
+		<div class="toggler">
+    <div id="effect7"  style="display:none;" class="ui-widget-content ui-corner-all">
+        <h3 class="ui-widget-header ui-corner-all">Answer & Explanation</h3>
+       <p> <div style="display:none">correct_option_number: </div>
+Answer: a series of corporate and accounting frauds involving Enron, Arthur Andersen, WorldCom, and numerous others.
+			
+        </p>
+    </div>
+</div>
+
+		</td>
+
+
+    </tr>
+	<tr>
+        <td>8</td>         
+        <td>  	
+
+<br />
+<span style="font-size:18px;"><strong>The following item is NEW to the 13th edition.</strong><br />
+<br />
+Because of US &quot;Securities Offering Reform&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; can take advantage of a special streamlined &quot;shelf registration&quot; process that provides for automatic effectiveness of a registration statement upon filing with the SEC (i.e., no SEC review).</span><br />
+<ol type="A">
+	<li>
+		<span style="font-size:18px;">only unseasoned issuers</span></li>
+	<li>
+		<span style="font-size:18px;">only seasoned issuers</span></li>
+	<li>
+		<span style="font-size:18px;">only well-known seasoned issuers (WKSIs)</span></li>
+	<li>
+		<span style="font-size:18px;">only seasoned issuers and well-known seasoned issuers (WKSIs)</span></li>
+</ol>
+
+Answer: only well-known seasoned issuers (WKSIs)
+	
+		<hr>
+		<a href="#" id="button8" class="ui-state-default ui-corner-all">View Answer</a>
+		<div class="toggler">
+    <div id="effect8"  style="display:none;" class="ui-widget-content ui-corner-all">
+        <h3 class="ui-widget-header ui-corner-all">Answer & Explanation</h3>
+        <p> <div style="display:none">correct_option_number: </div>
+            Answer: 
+			
+        </p>
+    </div>
+</div>
+
+		</td>
+
+
+    </tr>
+   
+</table>
+
+	
+	
+</body>
+</html>

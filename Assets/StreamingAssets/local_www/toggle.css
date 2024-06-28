@@ -1,0 +1,400 @@
+/* CSS Document */
+    .toggler {
+        width: auto;
+        height: auto;
+    }
+	   #button {
+        padding: .25em .25em;
+        text-decoration: none;
+		
+    }
+
+	
+    #button1 {
+        padding: .5em 1em;
+        text-decoration: none;
+    }
+    #effect1 {
+        position: relative;
+        width: auto;
+        height: auto;
+        padding: 0.4em;
+    }
+    #effect1 h3 {
+        margin: 0;
+        padding: 0.4em;
+        text-align: center;
+    }
+	#button2 {
+        padding: .5em 1em;
+        text-decoration: none;
+    }
+    #effect2 {
+        position: relative;
+        width: auto;
+        height: auto;
+        padding: 0.4em;
+    }
+    #effect2 h3 {
+        margin: 0;
+        padding: 0.4em;
+        text-align: center;
+    }
+	#button3 {
+        padding: .5em 1em;
+        text-decoration: none;
+    }
+    #effect3 {
+        position: relative;
+        width: auto;
+        height: auto;
+        padding: 0.4em;
+    }
+    #effect3 h3 {
+        margin: 0;
+        padding: 0.4em;
+        text-align: center;
+    }
+
+
+    #button4 {
+        padding: .5em 1em;
+        text-decoration: none;
+    }
+    #effect4 {
+        position: relative;
+        width: auto;
+        height: auto;
+        padding: 0.4em;
+    }
+    #effect4 h3 {
+        margin: 0;
+        padding: 0.4em;
+        text-align: center;
+    }
+	#button5 {
+        padding: .5em 1em;
+        text-decoration: none;
+    }
+    #effect5 {
+        position: relative;
+        width: auto;
+        height: auto;
+        padding: 0.4em;
+    }
+    #effect5 h3 {
+        margin: 0;
+        padding: 0.4em;
+        text-align: center;
+    }
+	#button6 {
+        padding: .5em 1em;
+        text-decoration: none;
+    }
+    #effect6 {
+        position: relative;
+        width: auto;
+        height: auto;
+        padding: 0.4em;
+    }
+    #effect6 h3 {
+        margin: 0;
+        padding: 0.4em;
+        text-align: center;
+    }
+
+    #button7 {
+        padding: .5em 1em;
+        text-decoration: none;
+    }
+    #effect7 {
+        position: relative;
+        width: auto;
+        height: auto;
+        padding: 0.4em;
+    }
+    #effect7 h3 {
+        margin: 0;
+        padding: 0.4em;
+        text-align: center;
+    }
+	#button8 {
+        padding: .5em 1em;
+        text-decoration: none;
+    }
+    #effect8 {
+        position: relative;
+        width: auto;
+        height: auto;
+        padding: 0.4em;
+    }
+    #effect8 h3 {
+        margin: 0;
+        padding: 0.4em;
+        text-align: center;
+    }
+	#button9 {
+        padding: .5em 1em;
+        text-decoration: none;
+    }
+    #effect9 {
+        position: relative;
+        width: auto;
+        height: auto;
+        padding: 0.4em;
+    }
+    #effect9 h3 {
+        margin: 0;
+        padding: 0.4em;
+        text-align: center;
+    }
+
+
+    #button10 {
+        padding: .5em 1em;
+        text-decoration: none;
+    }
+    #effect10 {
+        position: relative;
+        width: auto;
+        height: auto;
+        padding: 0.4em;
+    }
+    #effect10 h3 {
+        margin: 0;
+        padding: 0.4em;
+        text-align: center;
+    }
+	#button11 {
+        padding: .5em 1em;
+        text-decoration: none;
+    }
+    #effect11 {
+        position: relative;
+        width: auto;
+        height: auto;
+        padding: 0.4em;
+    }
+    #effect11 h3 {
+        margin: 0;
+        padding: 0.4em;
+        text-align: center;
+    }
+	#button12 {
+        padding: .5em 1em;
+        text-decoration: none;
+    }
+    #effect12 {
+        position: relative;
+        width: auto;
+        height: auto;
+        padding: 0.4em;
+    }
+    #effect12 h3 {
+        margin: 0;
+        padding: 0.4em;
+        text-align: center;
+    }
+
+
+    #button13 {
+        padding: .5em 1em;
+        text-decoration: none;
+    }
+    #effect13 {
+        position: relative;
+        width: auto;
+        height: auto;
+        padding: 0.4em;
+    }
+    #effect13 h3 {
+        margin: 0;
+        padding: 0.4em;
+        text-align: center;
+    }
+	#button14 {
+        padding: .5em 1em;
+        text-decoration: none;
+    }
+    #effect14 {
+        position: relative;
+        width: auto;
+        height: auto;
+        padding: 0.4em;
+    }
+    #effect14 h3 {
+        margin: 0;
+        padding: 0.4em;
+        text-align: center;
+    }
+	#button15 {
+        padding: .5em 1em;
+        text-decoration: none;
+    }
+    #effect15 {
+        position: relative;
+        width: auto;
+        height: auto;
+        padding: 0.4em;
+    }
+    #effect15 h3 {
+        margin: 0;
+        padding: 0.4em;
+        text-align: center;
+    }
+	#button16 {
+        padding: .5em 1em;
+        text-decoration: none;
+    }
+    #effect16 {
+        position: relative;
+        width: auto;
+        height: auto;
+        padding: 0.4em;
+    }
+    #effect16 h3 {
+        margin: 0;
+        padding: 0.4em;
+        text-align: center;
+    }
+
+
+    #button17 {
+        padding: .5em 1em;
+        text-decoration: none;
+    }
+    #effect17 {
+        position: relative;
+        width: auto;
+        height: auto;
+        padding: 0.4em;
+    }
+    #effect17 h3 {
+        margin: 0;
+        padding: 0.4em;
+        text-align: center;
+    }
+	#button18 {
+        padding: .5em 1em;
+        text-decoration: none;
+    }
+    #effect18 {
+        position: relative;
+        width: auto;
+        height: auto;
+        padding: 0.4em;
+    }
+    #effect18 h3 {
+        margin: 0;
+        padding: 0.4em;
+        text-align: center;
+    }
+	#button19 {
+        padding: .5em 1em;
+        text-decoration: none;
+    }
+    #effect19 {
+        position: relative;
+        width: auto;
+        height: auto;
+        padding: 0.4em;
+    }
+    #effect19 h3 {
+        margin: 0;
+        padding: 0.4em;
+        text-align: center;
+    }
+#button20 {
+        padding: .5em 1em;
+        text-decoration: none;
+    }
+    #effect20 {
+        position: relative;
+        width: auto;
+        height: auto;
+        padding: 0.4em;
+    }
+    #effect20 h3 {
+        margin: 0;
+        padding: 0.4em;
+        text-align: center;
+    }
+
+
+    #button21 {
+        padding: .5em 1em;
+        text-decoration: none;
+    }
+    #effect21 {
+        position: relative;
+        width: auto;
+        height: auto;
+        padding: 0.4em;
+    }
+    #effect21 h3 {
+        margin: 0;
+        padding: 0.4em;
+        text-align: center;
+    }
+	#button22 {
+        padding: .5em 1em;
+        text-decoration: none;
+    }
+    #effect22{
+        position: relative;
+        width: auto;
+        height: auto;
+        padding: 0.4em;
+    }
+    #effect22 h3 {
+        margin: 0;
+        padding: 0.4em;
+        text-align: center;
+    }
+	#button23 {
+        padding: .5em 1em;
+        text-decoration: none;
+    }
+    #effect23 {
+        position: relative;
+        width: auto;
+        height: auto;
+        padding: 0.4em;
+    }
+    #effect23 h3 {
+        margin: 0;
+        padding: 0.4em;
+        text-align: center;
+    }
+
+
+    #button24 {
+        padding: .5em 1em;
+        text-decoration: none;
+    }
+    #effect24 {
+        position: relative;
+        width: auto;
+        height: auto;
+        padding: 0.4em;
+    }
+    #effect24 h3 {
+        margin: 0;
+        padding: 0.4em;
+        text-align: center;
+    }
+	#button25 {
+        padding: .5em 1em;
+        text-decoration: none;
+    }
+    #effect25 {
+        position: relative;
+        width: auto;
+        height: auto;
+        padding: 0.4em;
+    }
+    #effect25 h3 {
+        margin: 0;
+        padding: 0.4em;
+        text-align: center;
+    }

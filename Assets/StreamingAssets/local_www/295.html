@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+body {
+margin-top:10px;
+   	margin-left:5px;
+	margin-right:5px;
+    font-family: 'trebuchet MS', 'Lucida sans', Arial;
+    font-size: 14px;
+    color: #444;
+	background-color:#006635;
+  color:#FFFFFF;
+  	font-size:18px;
+
+}
+
+table {
+    *border-collapse: collapse; /* IE7 and lower */
+    border-spacing: 0;
+    width: 100%;
+}
+
+.bordered {
+    border: solid #ccc 1px;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+    -webkit-box-shadow: 0 1px 1px #ccc; 
+    -moz-box-shadow: 0 1px 1px #ccc; 
+    box-shadow: 0 1px 1px #ccc;         
+}
+
+.bordered td a
+{
+    background-color: #dce9f9;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#ebf3fc), to(#dce9f9));
+    background-image: -webkit-linear-gradient(top, #ebf3fc, #dce9f9);
+    background-image:    -moz-linear-gradient(top, #ebf3fc, #dce9f9);
+    background-image:     -ms-linear-gradient(top, #ebf3fc, #dce9f9);
+    background-image:      -o-linear-gradient(top, #ebf3fc, #dce9f9);
+    background-image:         linear-gradient(top, #ebf3fc, #dce9f9);
+    -webkit-box-shadow: 0 1px 0 rgba(255,255,255,.8) inset; 
+    -moz-box-shadow:0 1px 0 rgba(255,255,255,.8) inset;  
+    box-shadow: 0 1px 0 rgba(255,255,255,.8) inset;        
+    border-top: none;
+    text-shadow: 0 1px 0 rgba(255,255,255,.5);
+	
+  background-color:#006633;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAyCAYAAACd+7GKAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyBpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBXaW5kb3dzIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjUwRTNGNUIzNDhBMjExRTI5MjY0Q0ZBRDcxOTYxNUNFIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjUwRTNGNUI0NDhBMjExRTI5MjY0Q0ZBRDcxOTYxNUNFIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6NTBFM0Y1QjE0OEEyMTFFMjkyNjRDRkFENzE5NjE1Q0UiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6NTBFM0Y1QjI0OEEyMTFFMjkyNjRDRkFENzE5NjE1Q0UiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz6JCXrGAAAANElEQVR42mIwMrL6z8TAwPAXlfiDyvqNykIjfqGyiCB+4uL+JMUUNMvRCDSHo3nrL0CAAQBzOzIE69Ar8wAAAABJRU5ErkJggg==);
+  background-repeat: repeat-x;
+  box-shadow: inset 0 0 3px black;
+  -moz-box-shadow: inset 0 0 3px black;
+  -webkit-box-shadow: inset 0 0 3px black;
+  color:#FFFFFF;
+   }
+
+
+
+.bordered tr:hover {
+    background:#A3A352;
+    -o-transition: all 0.1s ease-in-out;
+    -webkit-transition: all 0.1s ease-in-out;
+    -moz-transition: all 0.1s ease-in-out;
+    -ms-transition: all 0.1s ease-in-out;
+    transition: all 0.1s ease-in-out;     
+}    
+    
+.bordered td, .bordered th {
+    border-left: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;    
+}
+
+.bordered td {
+  background-color:#006633;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAyCAYAAACd+7GKAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyBpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBXaW5kb3dzIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjUwRTNGNUIzNDhBMjExRTI5MjY0Q0ZBRDcxOTYxNUNFIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjUwRTNGNUI0NDhBMjExRTI5MjY0Q0ZBRDcxOTYxNUNFIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6NTBFM0Y1QjE0OEEyMTFFMjkyNjRDRkFENzE5NjE1Q0UiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6NTBFM0Y1QjI0OEEyMTFFMjkyNjRDRkFENzE5NjE1Q0UiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz6JCXrGAAAANElEQVR42mIwMrL6z8TAwPAXlfiDyvqNykIjfqGyiCB+4uL+JMUUNMvRCDSHo3nrL0CAAQBzOzIE69Ar8wAAAABJRU5ErkJggg==);
+  background-repeat: repeat-x;
+  box-shadow: inset 0 0 3px black;
+  -moz-box-shadow: inset 0 0 3px black;
+  -webkit-box-shadow: inset 0 0 3px black;
+  color:#FFFFFF;
+}
+.bordered th {
+    background-color: #dce9f9;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#ebf3fc), to(#dce9f9));
+    background-image: -webkit-linear-gradient(top, #ebf3fc, #dce9f9);
+    background-image:    -moz-linear-gradient(top, #ebf3fc, #dce9f9);
+    background-image:     -ms-linear-gradient(top, #ebf3fc, #dce9f9);
+    background-image:      -o-linear-gradient(top, #ebf3fc, #dce9f9);
+    background-image:         linear-gradient(top, #ebf3fc, #dce9f9);
+    -webkit-box-shadow: 0 1px 0 rgba(255,255,255,.8) inset; 
+    -moz-box-shadow:0 1px 0 rgba(255,255,255,.8) inset;  
+    box-shadow: 0 1px 0 rgba(255,255,255,.8) inset;        
+    border-top: none;
+    text-shadow: 0 1px 0 rgba(255,255,255,.5);
+	
+  background-color:#006633;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAyCAYAAACd+7GKAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyBpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBXaW5kb3dzIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjUwRTNGNUIzNDhBMjExRTI5MjY0Q0ZBRDcxOTYxNUNFIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjUwRTNGNUI0NDhBMjExRTI5MjY0Q0ZBRDcxOTYxNUNFIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6NTBFM0Y1QjE0OEEyMTFFMjkyNjRDRkFENzE5NjE1Q0UiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6NTBFM0Y1QjI0OEEyMTFFMjkyNjRDRkFENzE5NjE1Q0UiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz6JCXrGAAAANElEQVR42mIwMrL6z8TAwPAXlfiDyvqNykIjfqGyiCB+4uL+JMUUNMvRCDSHo3nrL0CAAQBzOzIE69Ar8wAAAABJRU5ErkJggg==);
+  background-repeat: repeat-x;
+  box-shadow: inset 0 0 3px black;
+  -moz-box-shadow: inset 0 0 3px black;
+  -webkit-box-shadow: inset 0 0 3px black;
+  color:#FFFFFF;
+	
+}
+
+
+.bordered td:first-child, .bordered th:first-child {
+    border-left: none;
+}
+
+.bordered th:first-child {
+    -moz-border-radius: 6px 0 0 0;
+    -webkit-border-radius: 6px 0 0 0;
+    border-radius: 6px 0 0 0;
+}
+
+.bordered th:last-child {
+    -moz-border-radius: 0 6px 0 0;
+    -webkit-border-radius: 0 6px 0 0;
+    border-radius: 0 6px 0 0;
+}
+
+.bordered th:only-child{
+    -moz-border-radius: 6px 6px 0 0;
+    -webkit-border-radius: 6px 6px 0 0;
+    border-radius: 6px 6px 0 0;
+}
+
+.bordered tr:last-child td:first-child {
+    -moz-border-radius: 0 0 0 6px;
+    -webkit-border-radius: 0 0 0 6px;
+    border-radius: 0 0 0 6px;
+}
+
+.bordered tr:last-child td:last-child {
+    -moz-border-radius: 0 0 6px 0;
+    -webkit-border-radius: 0 0 6px 0;
+    border-radius: 0 0 6px 0;
+}
+
+
+
+/*----------------------*/
+
+.zebra td, .zebra th {
+    padding: 10px;
+    border-bottom: 1px solid #f2f2f2;    
+}
+
+.zebra tbody tr:nth-child(even) {
+    background: #f5f5f5;
+    -webkit-box-shadow: 0 1px 0 rgba(255,255,255,.8) inset; 
+    -moz-box-shadow:0 1px 0 rgba(255,255,255,.8) inset;  
+    box-shadow: 0 1px 0 rgba(255,255,255,.8) inset;        
+}
+
+.zebra th {
+    text-align: left;
+    text-shadow: 0 1px 0 rgba(255,255,255,.5); 
+    border-bottom: 1px solid #ccc;
+    background-color: #eee;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#f5f5f5), to(#eee));
+    background-image: -webkit-linear-gradient(top, #f5f5f5, #eee);
+    background-image:    -moz-linear-gradient(top, #f5f5f5, #eee);
+    background-image:     -ms-linear-gradient(top, #f5f5f5, #eee);
+    background-image:      -o-linear-gradient(top, #f5f5f5, #eee); 
+    background-image:         linear-gradient(top, #f5f5f5, #eee);
+}
+
+.zebra th:first-child {
+    -moz-border-radius: 6px 0 0 0;
+    -webkit-border-radius: 6px 0 0 0;
+    border-radius: 6px 0 0 0;  
+}
+
+.zebra th:last-child {
+    -moz-border-radius: 0 6px 0 0;
+    -webkit-border-radius: 0 6px 0 0;
+    border-radius: 0 6px 0 0;
+}
+
+.zebra th:only-child{
+    -moz-border-radius: 6px 6px 0 0;
+    -webkit-border-radius: 6px 6px 0 0;
+    border-radius: 6px 6px 0 0;
+}
+
+
+
+
+.zebra tfoot td {
+    border-bottom: 0;
+    border-top: 1px solid #fff;
+    background-color: #f1f1f1;  
+}
+
+.zebra tfoot td:first-child {
+    -moz-border-radius: 0 0 0 6px;
+    -webkit-border-radius: 0 0 0 6px;
+    border-radius: 0 0 0 6px;
+}
+
+.zebra tfoot td:last-child {
+    -moz-border-radius: 0 0 6px 0;
+    -webkit-border-radius: 0 0 6px 0;
+    border-radius: 0 0 6px 0;
+}
+
+.zebra tfoot td:only-child{
+    -moz-border-radius: 0 0 6px 6px;
+    -webkit-border-radius: 0 0 6px 6px
+    border-radius: 0 0 6px 6px
+}
+  .round-button {
+    display:block;
+    width:35px;
+    height:35px;
+    border: 0px solid #f5f5f5;
+    border-radius: 50%;
+    color:#000000;
+    text-align:center;
+    text-decoration:none;
+    background:#FFFFFF;
+    box-shadow: 0 0 3px gray;
+    font-size:22px;
+    font-weight:bold;
+}
+.round-button:hover {
+    background:#C0C0C0;
+}
+</style>
+<link rel="stylesheet" href="jquery-ui.css" />
+    <script src="jquery-1.8.3.min.js"></script>
+    <script src="jquery-ui.js"></script>
+    <link rel="stylesheet" href="/resources/demos/style.css" />
+    <link rel="stylesheet" type="text/css" href="toggle.css">
+    <script type="text/javascript" src="toggle.js">
+	</script>
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"></head>
+<body>
+
+
+<table border="0" style="color:#FFFFFF; background:#006600;" cellpadding="3" cellspacing="0" width="100%" height="60">
+<tr><td  align="center" width="50"><input class="round-button" type="button" value="◄" onClick="history.back(-1)" /></td>
+<td><span style="font-size:24px;"><strong>Stocks Market</strong></span></td></tr></table><br />
+<table class="bordered">
+    <thead>
+
+    <tr>
+        <th>Sr. N.</th>        
+        <th>Substantial Questions</th>
+
+
+    </tr>
+    </thead>
+    <tr>
+
+        <td>1</td>        
+        <td><span style="font-size:18px;"> Letter stock is</span><br />
+<ol type="A">
+	<li>
+		<span style="font-size:18px;">a handwritten certificate representing a corporate IOU.</span></li>
+	<li>
+		<span style="font-size:18px;">a mass mailing offering a security for sale.</span></li>
+	<li>
+		<span style="font-size:18px;">securities issued by the United States Postal Service.</span></li>
+	<li>
+		<span style="font-size:18px;">privately placed common stock that cannot be immediately resold to the general public.</span></li>
+</ol>
+
+
+		
+	   <hr>
+		<a href="#" id="button1" class="ui-state-default ui-corner-all">View Answer</a>
+		<div class="toggler">
+    <div id="effect1"  style="display:none;" class="ui-widget-content ui-corner-all">
+        <h3 class="ui-widget-header ui-corner-all">Answer & Explanation</h3>
+		<p> <div style="display:none">correct_option_number: </div> 
+		
+Answer: privately placed common stock that cannot be immediately resold to the general public.
+			
+        </p>
+    </div>
+</div>
+
+		</td>
+		
+		
+
+    </tr>        
+    <tr>
+        <td>2</td>         
+        <td> 
+		<span style="font-size:18px;">  A preliminary prospectus is known as a</span><br />
+<ol type="A">
+	<li>
+		<span style="font-size:18px;">golden parachute.</span></li>
+	<li>
+		<span style="font-size:18px;">red herring.</span></li>
+	<li>
+		<span style="font-size:18px;">blue sky.</span></li>
+	<li>
+		<span style="font-size:18px;">green shoe.</span></li>
+</ol>
+
+			
+		
+		<hr>
+		<a href="#" id="button2" class="ui-state-default ui-corner-all">View Answer</a>
+		<div class="toggler">
+    <div id="effect2"  style="display:none;" class="ui-widget-content ui-corner-all">
+        <h3 class="ui-widget-header ui-corner-all">Answer & Explanation</h3>
+        <p> <div style="display:none">correct_option_number: </div>
+Answer: red herring.
+			
+        </p>
+    </div>
+</div>
+
+		</td>
+
+
+    </tr>
+	<tr>
+        <td>3</td>         
+        <td>	
+<span style="font-size:18px;">  If an investment banker has agreed to sell a new issue of securities on a best-efforts basis, the issue</span><br />
+<ol type="A">
+	<li>
+		<span style="font-size:18px;">most likely involves an unusually large stock offering.</span></li>
+	<li>
+		<span style="font-size:18px;">most likely involves bonds instead of common stock.</span></li>
+	<li>
+		<span style="font-size:18px;">results in no assumption of underwriting risk by the investment banker.</span></li>
+	<li>
+		<span style="font-size:18px;">most likely involves a well-established, large company.</span></li>
+</ol>
+
+			
+
+		
+		<hr>
+		<a href="#" id="button3" class="ui-state-default ui-corner-all">View Answer</a>
+		<div class="toggler">
+    <div id="effect3"  style="display:none;" class="ui-widget-content ui-corner-all">
+        <h3 class="ui-widget-header ui-corner-all">Answer & Explanation</h3>
+        <p> <div style="display:none">correct_option_number: </div>
+Answer: results in no assumption of underwriting risk by the investment banker.
+			
+        </p>
+		    </div>
+</div>
+
+		</td>
+
+
+    </tr>
+	<tr>
+        <td>4</td>         
+        <td> 	
+
+	<span style="font-size:18px;"> The actual market value of a right will differ from its theoretical value for all of the following reasons EXCEPT for:</span><br />
+<ol type="A">
+	<li>
+		<span style="font-size:18px;">the size of the firm&#39;s marginal tax rate.</span></li>
+	<li>
+		<span style="font-size:18px;">the amount of transactions costs incurred.</span></li>
+	<li>
+		<span style="font-size:18px;">investor speculation.</span></li>
+	<li>
+		<span style="font-size:18px;">the irregular exercise and sale of rights over the subscription period.</span></li>
+</ol>
+
+
+	
+		<hr>
+		<a href="#" id="button4" class="ui-state-default ui-corner-all">View Answer</a>
+		<div class="toggler">
+    <div id="effect4"  style="display:none;" class="ui-widget-content ui-corner-all">
+        <h3 class="ui-widget-header ui-corner-all">Answer & Explanation</h3>
+        <p> <div style="display:none">correct_option_number: </div>
+Answer: the size of the firm&#39;s marginal tax rate.
+			
+        </p>
+    </div>
+</div>
+
+		</td>
+
+
+    </tr>
+	<tr>
+        <td>5</td>         
+        <td>			
+<span style="font-size:18px;">  In a common stock rights offering the subscription price is generally:</span><br />
+<ol type="A">
+	<li>
+		<span style="font-size:18px;">set equal to the current market price of the stock.</span></li>
+	<li>
+		<span style="font-size:18px;">set below the current market price of the stock.</span></li>
+	<li>
+		<span style="font-size:18px;">set above the current market price of the stock.</span></li>
+	<li>
+		<span style="font-size:18px;">set after the stock goes &quot;ex-rights.&quot;</span></li>
+</ol>
+
+		
+		<hr>
+		<a href="#" id="button5" class="ui-state-default ui-corner-all">View Answer</a>
+		<div class="toggler">
+    <div id="effect5"  style="display:none;" class="ui-widget-content ui-corner-all">
+        <h3 class="ui-widget-header ui-corner-all">Answer & Explanation</h3>
+        <p> <div style="display:none">correct_option_number: </div>
+Answer: set below the current market price of the stock.
+			 
+        </p>
+    </div>
+</div>
+
+		</td>
+
+
+    </tr>
+	<tr>
+        <td>6</td>         
+        <td>	
+			
+<span style="font-size:18px;">  When the investment banker bears the risk of not being able to sell a new security at the established price, this is known as:</span><br />
+<ol type="A">
+	<li>
+		<span style="font-size:18px;">a best efforts offering.</span></li>
+	<li>
+		<span style="font-size:18px;">underwriting.</span></li>
+	<li>
+		<span style="font-size:18px;">shelf registration.</span></li>
+	<li>
+		<span style="font-size:18px;">making a market.</span></li>
+</ol>
+
+
+
+	
+		<hr>
+		<a href="#" id="button6" class="ui-state-default ui-corner-all">View Answer</a>
+		<div class="toggler">
+    <div id="effect6"  style="display:none;" class="ui-widget-content ui-corner-all">
+        <h3 class="ui-widget-header ui-corner-all">Answer & Explanation</h3>
+        <p> <div style="display:none">correct_option_number: </div>
+Answer: underwriting.
+			 
+        </p>
+    </div>
+</div>
+
+		</td>
+
+
+    </tr>
+	<tr>
+        <td>7</td>         
+        <td>  	
+			
+<span style="font-size:18px;">  To say that there is &quot;asymmetric information&quot; in the issuing of common stock or debt means that</span>
+<ol type="A">
+	<li>
+		<span style="font-size:18px;">investors have nearly perfect information.</span></li>
+	<li>
+		<span style="font-size:18px;">the markets have nearly perfect information.</span></li>
+	<li>
+		<span style="font-size:18px;">investors have more accurate information than management has.</span></li>
+	<li>
+		<span style="font-size:18px;">management has more accurate information than investors have.</span></li>
+</ol>
+
+
+
+		
+		<hr>
+		<a href="#" id="button7" class="ui-state-default ui-corner-all">View Answer</a>
+		<div class="toggler">
+    <div id="effect7"  style="display:none;" class="ui-widget-content ui-corner-all">
+        <h3 class="ui-widget-header ui-corner-all">Answer & Explanation</h3>
+       <p> <div style="display:none">correct_option_number: </div>
+Answer: management has more accurate information than investors have.
+			
+        </p>
+    </div>
+</div>
+
+		</td>
+
+
+    </tr>
+	<tr>
+        <td>8</td>         
+        <td>  	
+<span style="font-size:18px;"> In calculating the value of one right when the stock is selling &quot;rights-on,&quot; the analyst needs to know the number of rights needed to buy one share of stock and:</span><br />
+<ol type="A">
+	<li>
+		<span style="font-size:18px;">the subscription price per share.</span></li>
+	<li>
+		<span style="font-size:18px;">the transactions costs involved.</span></li>
+	<li>
+		<span style="font-size:18px;">the price-earnings ratio of the firm&#39;s stock.</span></li>
+	<li>
+		<span style="font-size:18px;">the length of the rights offering period.</span></li>
+</ol>
+
+			
+
+		<hr>
+		<a href="#" id="button8" class="ui-state-default ui-corner-all">View Answer</a>
+		<div class="toggler">
+    <div id="effect8"  style="display:none;" class="ui-widget-content ui-corner-all">
+        <h3 class="ui-widget-header ui-corner-all">Answer & Explanation</h3>
+        <p> <div style="display:none">correct_option_number: </div>
+Answer: the subscription price per share.
+			
+        </p>
+    </div>
+</div>
+
+		</td>
+
+
+    </tr>
+
+</table>
+
+	
+	
+</body>
+</html>
